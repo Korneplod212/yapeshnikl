@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Address: {{ user.address }}</p>
+    <h2>My Books</h2>
+    <ul>
+        {% for book in user.books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+    <h2>My Exchanges</h2>
+    <ul>
+        {% for exchange in user.exchanges %}
+            <li>Exchange with {{ exchange.responder.first_name }} {{ exchange.responder.last_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

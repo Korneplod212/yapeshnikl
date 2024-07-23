@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exchanges</title>
+</head>
+<body>
+    <h1>Exchanges</h1>
+    <ul>
+        {% for exchange in exchanges %}
+            <li>Exchange with {{ exchange.responder.first_name }} {{ exchange.responder.last_name }} ({{ exchange.status }})</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/exchanges/request">Request an exchange</a></p>
+</body>
+</html>
